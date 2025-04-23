@@ -19,7 +19,7 @@ numpy==2.2.5
 pandas==2.2.3
 Pillow==11.2.1
 plotly==6.0.1
-protobuf==6.30.2
+- protobuf==6.30.2
 psycopg2==2.9.10
 pydeck==0.9.1
 pyOpenSSL==25.0.0
