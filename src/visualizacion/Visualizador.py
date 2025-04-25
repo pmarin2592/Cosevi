@@ -360,7 +360,7 @@ class Visualizador:
             view_state = pdk.ViewState(
                 latitude=df_clean['latitud'].mean(),
                 longitude=df_clean['longitud'].mean(),
-                zoom=7
+                zoom=10
             )
 
             layer = pdk.Layer(
@@ -459,7 +459,7 @@ class Visualizador:
             view_state = pdk.ViewState(
                 latitude=df_clean['latitud'].mean(),
                 longitude=df_clean['longitud'].mean(),
-                zoom=7
+                zoom=10
             )
 
             layer = pdk.Layer(

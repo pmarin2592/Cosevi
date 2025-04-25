@@ -28,22 +28,11 @@ st.set_page_config(page_title="Informe Ejecutivo", layout="wide", page_icon="�
 # Menú lateral
 st.sidebar.image(logo, width=120)
 #st.sidebar.title("Menú")
-opcion = st.sidebar.radio("Seleccione una opción", ["KPIs", "Formulario de Predicción","Analisis EDA","Mapas Interactivos"])
+opcion = st.sidebar.radio("Seleccione una opción", ["Formulario de Predicción","Mapas Interactivos"])
 
-if opcion == "KPIs":
-    visualizador.carga_inicio()
-elif opcion == "Formulario de Predicción":
+if opcion == "Formulario de Predicción":
     visualizador.carga_prediccion()
 
-elif opcion == "Analisis EDA":
-    st.title("Análisis EDA")
-    submenu = st.sidebar.selectbox("Seleccione un análisis", ["Personas en Accidentes", "Accidentes con Víctimas"])
-
-    if submenu == "Personas en Accidentes":
-        visualizador.carga_eda_personas(submenu)
-
-    elif submenu == "Accidentes con Víctimas":
-        visualizador.carga_eda_accidentes(submenu)
 elif opcion == "Mapas Interactivos":
     st.title("Mapas Interactivos")
     submenu = st.sidebar.selectbox("Seleccione un mapa", ["Personas en Accidentes", "Accidentes con Víctimas"])
