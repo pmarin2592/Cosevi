@@ -16,6 +16,7 @@ BASE_DIR = os.path.dirname(__file__)
 GD = GestorDatos()
 visualizador = Visualizador()
 
+@st.cache_data
 GD.procesar_todo()
 # Abre la imagen desde la misma carpeta que main.py
 logo_path = os.path.join(BASE_DIR, "logo-cuc.png")
