@@ -583,6 +583,7 @@ class GestorBaseDatos:
                     dwh.accidentes_victimas_tb a
                 inner join dwh.ubicaciones_tb ut on
                     ut.provincia = a.provincia and ut.canton = a.canton and ut.distrito = a.distrito and ut.latitud is not null
+                     WHERE LOWER(TRIM(a.mes_anno)) IN ('octubre', 'noviembre', 'diciembre')
                                    """
 
             cursor.execute(query)
@@ -642,6 +643,7 @@ class GestorBaseDatos:
                             dwh.base_personas_accidentes_tb a
                             inner join dwh.ubicaciones_tb ut on
                             ut.provincia = a.provincia and ut.canton = a.canton and ut.distrito = a.distrito and ut.latitud is not null
+                            WHERE LOWER(TRIM(a.mes_anno)) IN ('octubre', 'noviembre', 'diciembre')
                                           """
 
             cursor.execute(query)
